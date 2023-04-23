@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <title>Registro Personas</title>
+</head>
+ <body>
+    <form>
+      <fieldset>
+        <legend>Información Personal</legend>
+          <table class="tb-informacion-personal">
+            <tr>
+              <td><label for="primernombre">Primer Nombre</label></td>
+              <td colspan="4"><input type="text" id="primernombre" maxlength="20"/></td>
+              <td> <label for="segundonombre">Segundo Nombre</label></td>
+              <td colspan="4"><input type="text" id="segundonombre" maxlength="20"/></td>
+            <tr>
+              <td><label for="primerapellido">Primer Apellido</label></td>
+              <td colspan="4"><input type="text" id="primerapellido" maxlength="20"/></td>
+              <td> <label for="segundoapellido">Segundo Apellido</label></td>
+              <td colspan="4"><input type="text" id="segundoapellido" maxlength="20"/></td>
+            </tr>
+            <tr>
+              <td><label for="tipoidentificacion">Tipo Identificación</label></td>
+              <td colspan="4">
+                <select>
+                <option value="">Selecciona un tipo de Identificación</option>
+                <option value="NUIP">Número Unico de Identificación Personal</option>
+                <option value="TI">Tarjeta Identificación</option>
+                <option value="CE">Cedula Identificación</option>
+                <option value="CC">Cedula Extranjeria</option>
+                </select></td>
+              <td><label for="identificacion">Identificación</label></td>
+              <td colspan="4"><input type="number" id="identificacion" min="0"/></td>
+            </tr>
+            <tr>
+              <td><label for="rh">RH</label></td>
+              <td colspan="4"><select>
+                <option value="">Selecciona tu RH</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">O+</option>
+                <option value="B+">O+</option>
+                <option value="B-">O+</option>
+                <option value="O+">O+</option>
+                <option value="O-">O+</option>
+              </select></td>
+              <td><label for="foto">Foto</label></td>
+              <td colspan="4"><input type="file" id="foto" name="foto"/></td>
+            </tr>
+            <tr>
+              <td colspan="12" style="text-align: center;"><h2>Lugar de Residencia</h2></td>
+            </tr>
+            <tr>
+              <td><label for="paisresidencia">Pais de Residencia</label></td>
+              <td colspan=""4><select>
+                <option value="">Selecciona tu pais de residencia</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Peru">Peru</option>
+                <option value="Ecuador">Ecuador</option>
+              </select></td>
+              <td><label for="departamentoresidencia">Departamento de Residencia</label></td>
+              <td colspan="4"><select>
+                <option value="">Selecciona tu departamento de residencia</option>
+                <option value="Antioquia">Antioquia</option>
+                <option value="Cundinamarca">Cundinamarca</option>
+                <option value="Caldas">Caldas</option>
+                <option value="Valle-del-Cauca">Valle del Cauca</option>
+              </select></td>
+              <td><label for="municipioresidencia">Municipio de Residencia</label></td>
+              <td colspan="4"><select>
+                <option value="">Selecciona tu municipio de residencia</option>
+                <option value="Medellin">Medellin</option>
+                <option value="Rionegro">Rionegro</option>
+                <option value="Guarne">Guarne</option>
+                <option value="La-Ceja">La Ceja</option>
+              </select></td>
+            </tr>
+          </table>
+      </fieldset>
+      <fieldset>
+        <legend> Informacion de contacto</legend>
+        <table class="tb-informacion-contacto">
+          <tr>
+            <td><label for="telefono">Numero Telefonico</label></td>
+            <td><input type="number" id="telefono" min="0" /></td>
+            <td><label for="correo">Correo</label></td>
+            <td><input type="email" id="correo" /></td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend> Gustos Musicales </legend>
+        <table class="tb-gustos-musicales">
+          <tr>
+            <td><label for="pop">Pop</label></td>
+            <td><input type="checkbox" id="pop" value="pop" /></td>
+            <td><label for="rock">Rock</label></td>
+            <td><input type="checkbox" id="rock" value="rock" /></td>
+            <td><label for="metal">Metal</label></td>
+            <td><input type="checkbox" id="metal" value="metal" /></td>
+            <td><label for="rap">Rap</label></td>
+            <td><input type="checkbox" id="rap" value="rap"/></td>
+            <td><label for="reggaeton">Reggaeton</label></td>
+            <td><input type="checkbox" id="reggaeton" value="reggaeton" /></td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Presentacion Personal</legend>
+        <table class="tb-presentacion-personal">
+          <tr>
+            <td><label for="perfil">Descripción del Perfil</label></td>
+            <td><textarea id="perfil" placeholder="Ingresa una breve descripcion sobre ti"></textarea></td>
+            <td><label for="videopresentacion">Video de Presentación</label></td>
+            <td><input type="file" id="videopresentacion" /></td>
+          </tr>
+        </table>
+      </fieldset>
+      <label for="enviar">Enviar</label>
+      <input type="submit" value="enviar" />
+      <label for="limpiar">Limpiar</label>
+      <input type="reset" value="limpiar"/>
+    </form>
+ </body>
+</html>
