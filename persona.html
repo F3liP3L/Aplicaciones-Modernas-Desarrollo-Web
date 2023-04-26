@@ -9,21 +9,20 @@
       <fieldset>
         <legend>Información Personal</legend>
           <table class="tb-informacion-personal">
-            <tr>
               <td><label for="primernombre">Primer Nombre</label></td>
-              <td colspan="4"><input type="text" id="primernombre" maxlength="20"/></td>
+              <td colspan="4"><input type="text" id="primernombre" maxlength="20" tabindex="1"/></td>
               <td> <label for="segundonombre">Segundo Nombre</label></td>
-              <td colspan="4"><input type="text" id="segundonombre" maxlength="20"/></td>
+              <td colspan="4"><input type="text" id="segundonombre" maxlength="20" tabindex="2"/></td>
             <tr>
               <td><label for="primerapellido">Primer Apellido</label></td>
-              <td colspan="4"><input type="text" id="primerapellido" maxlength="20"/></td>
+              <td colspan="4"><input type="text" id="primerapellido" maxlength="20" tabindex="3"/></td>
               <td> <label for="segundoapellido">Segundo Apellido</label></td>
-              <td colspan="4"><input type="text" id="segundoapellido" maxlength="20"/></td>
+              <td colspan="4"><input type="text" id="segundoapellido" maxlength="20" tabindex="4"/></td>
             </tr>
             <tr>
               <td><label for="tipoidentificacion">Tipo Identificación</label></td>
               <td colspan="4">
-                <select>
+                <select tabindex="5">
                 <option value="">Selecciona un tipo de Identificación</option>
                 <option value="NUIP">Número Unico de Identificación Personal</option>
                 <option value="TI">Tarjeta Identificación</option>
@@ -31,11 +30,12 @@
                 <option value="CC">Cedula Extranjeria</option>
                 </select></td>
               <td><label for="identificacion">Identificación</label></td>
-              <td colspan="4"><input type="number" id="identificacion" min="0"/></td>
+              <td colspan="4"><input type="number" id="identificacion" min="0" tabindex="6"/></td>
             </tr>
             <tr>
               <td><label for="rh">RH</label></td>
-              <td colspan="4"><select>
+              <td colspan="4">
+                <select tabindex="7">
                 <option value="">Selecciona tu RH</option>
                 <option value="A+">A+</option>
                 <option value="A-">A-</option>
@@ -47,14 +47,15 @@
                 <option value="O-">O+</option>
               </select></td>
               <td><label for="foto">Foto</label></td>
-              <td colspan="4"><input type="file" id="foto" name="foto"/></td>
+              <td colspan="4"><input type="file" id="foto" name="foto" tabindex="8"/></td>
             </tr>
             <tr>
               <td colspan="12" style="text-align: center;"><h2>Lugar de Residencia</h2></td>
             </tr>
             <tr>
               <td><label for="paisresidencia">Pais de Residencia</label></td>
-              <td colspan=""4><select>
+              <td colspan=""4>
+                <select tabindex="9">
                 <option value="">Selecciona tu pais de residencia</option>
                 <option value="Colombia">Colombia</option>
                 <option value="Venezuela">Venezuela</option>
@@ -62,7 +63,8 @@
                 <option value="Ecuador">Ecuador</option>
               </select></td>
               <td><label for="departamentoresidencia">Departamento de Residencia</label></td>
-              <td colspan="4"><select>
+              <td colspan="4">
+                <select tabindex="10">
                 <option value="">Selecciona tu departamento de residencia</option>
                 <option value="Antioquia">Antioquia</option>
                 <option value="Cundinamarca">Cundinamarca</option>
@@ -70,7 +72,8 @@
                 <option value="Valle-del-Cauca">Valle del Cauca</option>
               </select></td>
               <td><label for="municipioresidencia">Municipio de Residencia</label></td>
-              <td colspan="4"><select>
+              <td colspan="4">
+                <select tabindex="11">
                 <option value="">Selecciona tu municipio de residencia</option>
                 <option value="Medellin">Medellin</option>
                 <option value="Rionegro">Rionegro</option>
@@ -85,9 +88,9 @@
         <table class="tb-informacion-contacto">
           <tr>
             <td><label for="telefono">Numero Telefonico</label></td>
-            <td><input type="number" id="telefono" min="0" /></td>
+            <td><input type="number" id="telefono" min="0" tabindex="12"/></td>
             <td><label for="correo">Correo</label></td>
-            <td><input type="email" id="correo" /></td>
+            <td><input type="email" id="correo" tabindex="13" /></td>
           </tr>
         </table>
       </fieldset>
@@ -96,15 +99,15 @@
         <table class="tb-gustos-musicales">
           <tr>
             <td><label for="pop">Pop</label></td>
-            <td><input type="checkbox" id="pop" value="pop" /></td>
+            <td><input type="checkbox" id="pop" value="pop" tabindex="14" /></td>
             <td><label for="rock">Rock</label></td>
-            <td><input type="checkbox" id="rock" value="rock" /></td>
+            <td><input type="checkbox" id="rock" value="rock" tabindex="16" /></td>
             <td><label for="metal">Metal</label></td>
-            <td><input type="checkbox" id="metal" value="metal" /></td>
+            <td><input type="checkbox" id="metal" value="metal" tabindex="17" /></td>
             <td><label for="rap">Rap</label></td>
-            <td><input type="checkbox" id="rap" value="rap"/></td>
+            <td><input type="checkbox" id="rap" value="rap" tabindex="18" /></td>
             <td><label for="reggaeton">Reggaeton</label></td>
-            <td><input type="checkbox" id="reggaeton" value="reggaeton" /></td>
+            <td><input type="checkbox" id="reggaeton" value="reggaeton" tabindex="19"/></td>
           </tr>
         </table>
       </fieldset>
@@ -113,16 +116,27 @@
         <table class="tb-presentacion-personal">
           <tr>
             <td><label for="perfil">Descripción del Perfil</label></td>
-            <td><textarea id="perfil" placeholder="Ingresa una breve descripcion sobre ti"></textarea></td>
+            <td><textarea id="perfil" placeholder="Ingresa una breve descripcion sobre ti" tabindex="20"></textarea></td>
             <td><label for="videopresentacion">Video de Presentación</label></td>
-            <td><input type="file" id="videopresentacion" /></td>
+            <td><input type="file" id="videopresentacion" tabindex="21"/></td>
           </tr>
         </table>
       </fieldset>
       <label for="enviar">Enviar</label>
-      <input type="submit" value="enviar" />
+      <input type="submit" value="enviar" tabindex="22"/>
       <label for="limpiar">Limpiar</label>
-      <input type="reset" value="limpiar"/>
+      <input type="reset" value="limpiar" tabindex="23" id="limpiar"/>
     </form>
+    <script>
+        const primerElemento = document.querySelector("#primernombre");
+        const ultimoElemento = document.querySelector("#limpiar");
+
+        ultimoElemento.addEventListener('keydown', function(event) {
+         if (event.key === 'Tab') {
+              event.preventDefault();
+              primerElemento.focus();
+          }
+        });
+    </script>
  </body>
 </html>
