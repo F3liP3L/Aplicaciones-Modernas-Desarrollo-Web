@@ -8,20 +8,20 @@
     <form>
       <fieldset>
         <legend>Información Personal</legend>
-          <table class="tb-informacion-personal">
+          <table class="tb-informacion-personal" border="2">
               <td><label for="primernombre">Primer Nombre</label></td>
-              <td colspan="4"><input type="text" id="primernombre" maxlength="20" tabindex="1"/></td>
+              <td colspan="6"><input type="text" id="primernombre" maxlength="20" tabindex="1"/></td>
               <td> <label for="segundonombre">Segundo Nombre</label></td>
-              <td colspan="4"><input type="text" id="segundonombre" maxlength="20" tabindex="2"/></td>
+              <td colspan="6"><input type="text" id="segundonombre" maxlength="20" tabindex="2"/></td>
             <tr>
               <td><label for="primerapellido">Primer Apellido</label></td>
-              <td colspan="4"><input type="text" id="primerapellido" maxlength="20" tabindex="3"/></td>
+              <td colspan="6"><input type="text" id="primerapellido" maxlength="20" tabindex="3"/></td>
               <td> <label for="segundoapellido">Segundo Apellido</label></td>
-              <td colspan="4"><input type="text" id="segundoapellido" maxlength="20" tabindex="4"/></td>
+              <td colspan="6"><input type="text" id="segundoapellido" maxlength="20" tabindex="4"/></td>
             </tr>
             <tr>
               <td><label for="tipoidentificacion">Tipo Identificación</label></td>
-              <td colspan="4">
+              <td colspan="6">
                 <select tabindex="5">
                 <option value="">Selecciona un tipo de Identificación</option>
                 <option value="NUIP">Número Unico de Identificación Personal</option>
@@ -30,7 +30,7 @@
                 <option value="CC">Cedula Extranjeria</option>
                 </select></td>
               <td><label for="identificacion">Identificación</label></td>
-              <td colspan="4"><input type="number" id="identificacion" min="0" tabindex="6"/></td>
+              <td colspan="6"><input type="number" id="identificacion" min="0" tabindex="6"/></td>
             </tr>
             <tr>
               <td><label for="rh">RH</label></td>
@@ -48,14 +48,16 @@
               </select></td>
               <td><label for="foto">Foto</label></td>
               <td colspan="4"><input type="file" id="foto" name="foto" tabindex="8"/></td>
+              <td><label for="fechanacimiento"> Fecha Nacimiento</label></td>
+              <td><input type="date" id="fechanacimiento" tabindex="9"/></td>
             </tr>
             <tr>
-              <td colspan="12" style="text-align: center;"><h2>Lugar de Residencia</h2></td>
+              <td colspan="16" style="text-align: center;"><h2>Lugar de Residencia</h2></td>
             </tr>
             <tr>
               <td><label for="paisresidencia">Pais de Residencia</label></td>
-              <td colspan=""4>
-                <select tabindex="9">
+              <td colspan="4">
+                <select tabindex="10">
                 <option value="">Selecciona tu pais de residencia</option>
                 <option value="Colombia">Colombia</option>
                 <option value="Venezuela">Venezuela</option>
@@ -64,7 +66,7 @@
               </select></td>
               <td><label for="departamentoresidencia">Departamento de Residencia</label></td>
               <td colspan="4">
-                <select tabindex="10">
+                <select tabindex="11">
                 <option value="">Selecciona tu departamento de residencia</option>
                 <option value="Antioquia">Antioquia</option>
                 <option value="Cundinamarca">Cundinamarca</option>
@@ -73,7 +75,7 @@
               </select></td>
               <td><label for="municipioresidencia">Municipio de Residencia</label></td>
               <td colspan="4">
-                <select tabindex="11">
+                <select tabindex="12">
                 <option value="">Selecciona tu municipio de residencia</option>
                 <option value="Medellin">Medellin</option>
                 <option value="Rionegro">Rionegro</option>
@@ -88,9 +90,9 @@
         <table class="tb-informacion-contacto">
           <tr>
             <td><label for="telefono">Numero Telefonico</label></td>
-            <td><input type="number" id="telefono" min="0" tabindex="12"/></td>
+            <td><input type="number" id="telefono" min="0" tabindex="13"/></td>
             <td><label for="correo">Correo</label></td>
-            <td><input type="email" id="correo" tabindex="13" /></td>
+            <td><input type="email" id="correo" tabindex="14" /></td>
           </tr>
         </table>
       </fieldset>
@@ -99,7 +101,7 @@
         <table class="tb-gustos-musicales">
           <tr>
             <td><label for="pop">Pop</label></td>
-            <td><input type="checkbox" id="pop" value="pop" tabindex="14" /></td>
+            <td><input type="checkbox" id="pop" value="pop" tabindex="15" /></td>
             <td><label for="rock">Rock</label></td>
             <td><input type="checkbox" id="rock" value="rock" tabindex="16" /></td>
             <td><label for="metal">Metal</label></td>
@@ -125,8 +127,34 @@
       <label for="enviar">Enviar</label>
       <input type="submit" value="enviar" tabindex="22"/>
       <label for="limpiar">Limpiar</label>
-      <input type="reset" value="limpiar" tabindex="23" id="limpiar"/>
+      <input type="reset" value="limpiar" tabindex="24" id="limpiar"/>
     </form>
+    <table border="4">
+      <marquee direction="right" behavior="alternate" scrollamount = 10><h1>Videos Favoritos </h1></marquee>
+      <thead>
+        <tr>
+          <th colspan="4">Mis Videos Favoritos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><a href="https://www.youtube.com/embed/E_KXmsO8aBM" target="contenido">Video 1</a></th>
+          <th><a href="https://www.youtube.com/embed/SUlO6cxxsaM" target="contenido" >Video 2</a></th>
+          <th><a href="https://www.youtube.com/embed/vmhAXEMWTxw" target="contenido">Video 3</a></th>
+          <th><a href="resources/Jack Black - Peaches.mp4" target="contenido">Video 4</a></th>
+        </tr>
+      </tbody>
+      <footer>
+        <tr>
+          <th colspan="4">
+            <video name="contenido" width="350" height="250" controls="" hidden></video>
+            <iframe name="contenido" width="350" height="250" title="Contenido" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+          </th>
+        </tr>
+      </footer>
+    </table>
+
+
     <script>
         const primerElemento = document.querySelector("#primernombre");
         const ultimoElemento = document.querySelector("#limpiar");
