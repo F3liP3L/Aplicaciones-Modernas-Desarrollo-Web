@@ -2,17 +2,20 @@
 <html lang="es">
 <head>
   <script> 
+    const message = "Ingresa por favor un dato correcto."
     let nombre = prompt("Como te llamas", "El demalas");
-    let continuar = false;
+    let totalSuma = 0;
+    let number = 0;
     do {
       do {
-        numberOne = parseFloat(prompt("Ingresa Numero 1: ", "0"));
-      } while (isNaN(numberOne));
-      do{
-        numberTwo = parseFloat(prompt("Ingresa Numero 2: ", "0"));
-      }while(isNaN(numberTwo));
-      alert(`Querido ${nombre}, tu resultado es ${numberOne + numberTwo}`)
-    } while(confirm("Desea seguir jugando"));
+        number = parseFloat(prompt("Ingresa un numero: ", "0"));
+        if(!isNaN(number)){
+          totalSuma += number;
+        }
+      } while (confirm("Desea ingresar otro numero:"));
+      alert(`Querido ${nombre}, tu resultado es ${totalSuma}`)
+      totalSuma = 0;
+    } while(confirm("Desea seguir jugando 🤔⁉️"));
 
     alert("Buena suerte compa!!!");
 
