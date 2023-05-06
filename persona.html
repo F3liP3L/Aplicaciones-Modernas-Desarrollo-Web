@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <script> 
+    const nota1 = 100; // Variables en un bloque y constantes.
+    let nota2 = 50; // Variables en un bloque.
+    var nota3 = 20; // Variables guardadas en un repositorio Global.
+
+    alert('Alert en head ' + (nota1 + nota2 + nota3))
+  </script>
  <meta charset="UTF-8">
  <title>Registro Personas</title>
 </head>
@@ -96,6 +103,7 @@
           </tr>
         </table>
       </fieldset>
+      <script> alert('Alert formulario gustos musicales')</script>
       <fieldset>
         <legend> Gustos Musicales </legend>
         <table class="tb-gustos-musicales">
@@ -153,9 +161,10 @@
         </tr>
       </footer>
     </table>
-
-
     <script>
+
+        alert('Buenas noches');
+
         const primerElemento = document.querySelector("#primernombre");
         const ultimoElemento = document.querySelector("#limpiar");
 
@@ -166,5 +175,6 @@
           }
         });
     </script>
+
  </body>
 </html>
