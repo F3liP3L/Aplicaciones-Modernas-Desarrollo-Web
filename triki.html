@@ -4,28 +4,57 @@
     <meta charset="UTF-8">
     <title>Triki</title>
 </head>
-<body>
-    <table border="1">
-        <thead>
-            <th colspan="3"><h1>Bienvenido al TRIKI</h1></th>
-        </thead>
-        <tbody>
-            <tr>
-                <th><button id="cuadro1">-</button></th>
-                <th><button id="cuadro2">-</button></th>
-                <th><button id="cuadro3">-</button></th>
-            </tr>
-            <tr>
-                <th><button id="cuadro4">-</button></th>
-                <th><button id="cuadro5">-</button></th>
-                <th><button id="cuadro6">-</button></th>
-            </tr>
-            <tr>
-                <th><button id="cuadro7">-</button></th>
-                <th><button id="cuadro8">-</button></th>
-                <th><button id="cuadro9">-</button></th>
-            </tr>
-        </tbody>
-    </table>
-</body>
+    <body>
+        <table border="1" id="gridRoot">
+            <thead>
+                <th colspan="3"><h1>Bienvenido al TRIKI</h1></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th><button onclick="juegoTriki('X', 'cuadro1')" id="cuadro1">-</button></th>
+                    <th><button onclick="juegoTriki('X', 'cuadro2')" id="cuadro2">-</button></th>
+                    <th><button onclick="juegoTriki('X', 'cuadro3')" id="cuadro3">-</button></th>
+                </tr>
+                <tr>
+                    <th><button onclick="juegoTriki('X', 'cuadro4')" id="cuadro4">-</button></th>
+                    <th><button onclick="juegoTriki('X', 'cuadro5')" id="cuadro5">-</button></th>
+                    <th><button onclick="juegoTriki('X', 'cuadro6')" id="cuadro6">-</button></th>
+                </tr>
+                <tr>
+                    <th><button onclick="juegoTriki('X', 'cuadro7')" id="cuadro7">-</button></th>
+                    <th><button onclick="juegoTriki('X', 'cuadro8')" id="cuadro8">-</button></th>
+                    <th><button onclick="juegoTriki('X', 'cuadro9')" id="cuadro9">-</button></th>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            function juegoTriki(letra, id) {
+
+                let botonActual = document.getElementById(id);
+                botonActual.textContent = letra;
+                botonActual.disabled = true;
+                
+                let tabla = document.getElementById('gridRoot');
+                let botones = tabla.getElementsByTagName("button");
+                let listBotones = Array.from(botones).filter(btn => btn.disabled==false);
+                console.log(listBotones);
+
+                if(listBotones.length >= 1){
+                    let indiceAleatorio = Math.floor(Math.random() * listBotones.length);
+
+                    let botonJugadaMaquina = listBotones[indiceAleatorio];
+                    botonJugadaMaquina.textContent = "O";
+                    botonJugadaMaquina.disabled = true;
+                }
+         
+                
+                //eliminar jugada en espicifico
+
+                /* if(box1 == box2 && box2 == box3){
+                    alert("Has ganado el triki")
+                }*/
+            }
+            
+        </script>
+    </body>
 </html>
