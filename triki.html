@@ -28,16 +28,19 @@
             </tbody>
         </table>
         <script>
+            let jugadasJugador = [];
+            let jugadasMaquina = [];
+
             function juegoTriki(letra, id) {
 
                 let botonActual = document.getElementById(id);
                 botonActual.textContent = letra;
                 botonActual.disabled = true;
+                jugadasJugador.push(botonActual);
                 
                 let tabla = document.getElementById('gridRoot');
                 let botones = tabla.getElementsByTagName("button");
                 let listBotones = Array.from(botones).filter(btn => btn.disabled==false);
-                console.log(listBotones);
 
                 if(listBotones.length >= 1){
                     let indiceAleatorio = Math.floor(Math.random() * listBotones.length);
@@ -45,14 +48,45 @@
                     let botonJugadaMaquina = listBotones[indiceAleatorio];
                     botonJugadaMaquina.textContent = "O";
                     botonJugadaMaquina.disabled = true;
+                    jugadasMaquina.push(botonJugadaMaquina)
+                    // console.log(jugadasMaquina + "con longitud " + jugadasJugador.length)
                 }
-         
-                
-                //eliminar jugada en espicifico
 
-                /* if(box1 == box2 && box2 == box3){
-                    alert("Has ganado el triki")
-                }*/
+                validarGanador(jugadasJugador);
+               // console.log(jugadasJugador + "con longitud " + jugadasJugador.length)
+
+                // console.log(listBotones);
+                if(listBotones.length===0){
+                    //Limpio y vuelvo a activar.
+                }
+
+            }
+
+            function validarGanador(jugadas) {
+                let cuadro1 = document.getElementById("cuadro1");
+                let cuadro2 = document.getElementById("cuadro2");
+                let cuadro3 = document.getElementById("cuadro3");
+                let cuadro4 = document.getElementById("cuadro4");
+                let cuadro5 = document.getElementById("cuadro5");
+                let cuadro6 = document.getElementById("cuadro6");
+                let cuadro7 = document.getElementById("cuadro7");
+                let cuadro8 = document.getElementById("cuadro8");
+                let cuadro9 = document.getElementById("cuadro9");
+
+                let existeGanador = false;
+
+                const POSIBLES_VICTORIAS = [[cuadro1, cuadro2, cuadro3], [cuadro1, cuadro4, cuadro7], [cuadro1,cuadro5, cuadro9], [cuadro3, cuadro5, cuadro7], [cuadro4, cuadro5, cuadro6], [cuadro7, cuadro8, cuadro9], [cuadro2, cuadro5, cuadro8], [cuadro3, cuadro6, cuadro9]];
+
+                POSIBLES_VICTORIAS.forEach(victorias => {
+                    if(victorias.every(elem => jugadas.includes(elem)) && jugadas.length >= 3){ // Comprobar que el vector victorias esta en jugadas
+                        existeGanador = true;
+                    }
+                })
+                if(existeGanador){
+                    alert("Felicidades Compa!!!");
+                } 
+
+
             }
             
         </script>
