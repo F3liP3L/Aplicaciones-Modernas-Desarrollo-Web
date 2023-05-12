@@ -49,20 +49,26 @@
                     botonJugadaMaquina.textContent = "O";
                     botonJugadaMaquina.disabled = true;
                     jugadasMaquina.push(botonJugadaMaquina)
-                    // console.log(jugadasMaquina + "con longitud " + jugadasJugador.length)
+
+                    if(validarGanador(jugadasMaquina)){
+                        alert('Te gano el PC 😎');
+                        limpiarTriki(botones);
+                    };
                 }
 
-                validarGanador(jugadasJugador);
-               // console.log(jugadasJugador + "con longitud " + jugadasJugador.length)
+                if(validarGanador(jugadasJugador)){
+                    alert("Has ganado 😽🫱🏼‍🫲🏻");
+                    limpiarTriki(botones);
+                }
 
-                // console.log(listBotones);
                 if(listBotones.length===0){
-                    //Limpio y vuelvo a activar.
+                   limpiarTriki(botones);
                 }
 
             }
 
             function validarGanador(jugadas) {
+
                 let cuadro1 = document.getElementById("cuadro1");
                 let cuadro2 = document.getElementById("cuadro2");
                 let cuadro3 = document.getElementById("cuadro3");
@@ -82,11 +88,18 @@
                         existeGanador = true;
                     }
                 })
-                if(existeGanador){
-                    alert("Felicidades Compa!!!");
-                } 
+                return existeGanador;
+            }
 
-
+            function limpiarTriki(tablero){
+                console.log(tablero);
+                Array.from(tablero).forEach( btn => {
+                        console.log(btn)
+                        btn.textContent = '-';
+                        btn.disabled = false;
+                    });
+                jugadasJugador = [];
+                jugadasMaquina = [];
             }
             
         </script>
