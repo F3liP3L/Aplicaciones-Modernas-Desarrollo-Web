@@ -156,14 +156,38 @@
     <script>
 
 
-        let nit = prompt("Ingrese un nit: ");
-        let nitFormateado = '';
+       /* let nit = prompt("Ingrese un nit: ");
+        let nitFormateado = '';*/
 
-        let expresionContarVocales= /[aeiou]/g;
+        let expresionContarVocales = /[aeiou]/g;
         let cadenita = 'El sol del medio oriente es totalmente brillante.'.toLocaleLowerCase();
-        let vocalesCadena = cadenita.match(expresionContarCaracteres);
+        let vocalesCadena = cadenita.match(expresionContarVocales);
         let vocales = {
-          vocal: a
+           a: 0,
+           e: 0,
+           i: 0,
+           o: 0,
+           u: 0
+        };
+        vocalesCadena.forEach( voc => {
+          if(voc === 'a'){
+            vocales.a += 1;
+          }
+          if(voc === 'e'){
+            vocales.e += 1;
+          }
+          if(voc === 'i'){
+            vocales.i += 1;
+          }
+          if(voc === 'o'){
+            vocales.o += 1;
+          }
+          if(voc === 'u'){
+            vocales.u += 1;
+          }
+        });
+        for(let clave in vocales){
+          console.log(clave + ': ' + vocales[clave]);
         }
         
 
