@@ -1,25 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <script> 
-    const message = "Ingresa por favor un dato correcto."
-    let nombre = prompt("Como te llamas", "El demalas");
-    let totalSuma = 0;
-    let number = 0;
-    do {
-      do {
-        number = parseFloat(prompt("Ingresa un numero: ", "0"));
-        if(!isNaN(number)){
-          totalSuma += number;
-        }
-      } while (confirm("Desea ingresar otro numero:"));
-      alert(`Querido ${nombre}, tu resultado es ${totalSuma}`)
-      totalSuma = 0;
-    } while(confirm("Desea seguir jugando 🤔⁉️"));
-
-    alert("Buena suerte compa!!!");
-
-  </script>
  <meta charset="UTF-8">
  <title>Registro Personas</title>
 </head>
@@ -173,6 +154,44 @@
       </footer>
     </table>
     <script>
+
+
+        let nit = prompt("Ingrese un nit: ");
+        let nitFormateado = '';
+
+        let expresionContarVocales= /[aeiou]/g;
+        let cadenita = 'El sol del medio oriente es totalmente brillante.'.toLocaleLowerCase();
+        let vocalesCadena = cadenita.match(expresionContarCaracteres);
+        let vocales = {
+          vocal: a
+        }
+        
+
+
+        // Expresion regular de un nit .
+        
+        let expresionRegular = /^\d{3}[.]\d{3}[-][A-Za-z]{3}[.]\d{2}[A-Za-z]{2}$/;
+
+        let cadena = '123.123-acd.4rrr';
+        //alert(expresionRegular.test(nit));
+
+
+        let texto2 = 'Esta es la sesion numero seis';
+        let arregloSplit = texto2.split(" ", 3);
+       // alert(arregloSplit);
+        // alert(texto2.repeat(100))
+
+        let segundoTexto = "Est";
+        let primerTexto = "Esta";
+        //alert(segundoTexto.localeCompare(primerTexto));
+        // alert(primerTexto.search(segundoTexto));
+
+        let numeroUno = 123e3; // X10 elevado
+        let numeroDos = 123e-3; // x10 elevado negativo
+
+        //let texto = prompt('Ingresa tu nombre: ');
+       // document.getElementById("primernombre").value = texto.trim().padStart(10, '-');
+
         const primerElemento = document.querySelector("#primernombre");
         const ultimoElemento = document.querySelector("#limpiar");
 
