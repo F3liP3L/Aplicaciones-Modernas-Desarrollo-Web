@@ -28,11 +28,6 @@
             </tbody>
         </table>
         <script>
-
-            let texto = prompt('').trim();
-            alert(texto);
-
-
             let jugadasJugador = [];
             let jugadasMaquina = [];
 
@@ -97,7 +92,6 @@
             }
 
             function limpiarTriki(tablero){
-                console.log(tablero);
                 Array.from(tablero).forEach( btn => {
                         console.log(btn)
                         btn.textContent = '-';
@@ -106,9 +100,6 @@
                 jugadasJugador = [];
                 jugadasMaquina = [];
             }
-
-            
-            
         </script>
     </body>
 </html>
