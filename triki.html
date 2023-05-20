@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Triki</title>
+    <link rel="stylesheet" href="resources/triki.css" type="text/css" />
 </head>
     <body>
-        <table border="1" id="gridRoot">
-            <thead>
-                <th colspan="3"><h1>Bienvenido al TRIKI</h1></th>
-            </thead>
-            <tbody>
-                <tr>
-                    <th><button onclick="juegoTriki('X', 'cuadro1')" id="cuadro1">-</button></th>
-                    <th><button onclick="juegoTriki('X', 'cuadro2')" id="cuadro2">-</button></th>
-                    <th><button onclick="juegoTriki('X', 'cuadro3')" id="cuadro3">-</button></th>
-                </tr>
-                <tr>
-                    <th><button onclick="juegoTriki('X', 'cuadro4')" id="cuadro4">-</button></th>
-                    <th><button onclick="juegoTriki('X', 'cuadro5')" id="cuadro5">-</button></th>
-                    <th><button onclick="juegoTriki('X', 'cuadro6')" id="cuadro6">-</button></th>
-                </tr>
-                <tr>
-                    <th><button onclick="juegoTriki('X', 'cuadro7')" id="cuadro7">-</button></th>
-                    <th><button onclick="juegoTriki('X', 'cuadro8')" id="cuadro8">-</button></th>
-                    <th><button onclick="juegoTriki('X', 'cuadro9')" id="cuadro9">-</button></th>
-                </tr>
-            </tbody>
-        </table>
+        <div class="container-triki">
+            <table border="1" id="gridRoot">
+                <thead>
+                    <th colspan="3"><h1>Bienvenido al TRIKI</h1></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th><button onclick="juegoTriki('X', 'cuadro1')" id="cuadro1">-</button></th>
+                        <th><button onclick="juegoTriki('X', 'cuadro2')" id="cuadro2">-</button></th>
+                        <th><button onclick="juegoTriki('X', 'cuadro3')" id="cuadro3">-</button></th>
+                    </tr>
+                    <tr>
+                        <th><button onclick="juegoTriki('X', 'cuadro4')" id="cuadro4">-</button></th>
+                        <th><button onclick="juegoTriki('X', 'cuadro5')" id="cuadro5">-</button></th>
+                        <th><button onclick="juegoTriki('X', 'cuadro6')" id="cuadro6">-</button></th>
+                    </tr>
+                    <tr>
+                        <th><button onclick="juegoTriki('X', 'cuadro7')" id="cuadro7">-</button></th>
+                        <th><button onclick="juegoTriki('X', 'cuadro8')" id="cuadro8">-</button></th>
+                        <th><button onclick="juegoTriki('X', 'cuadro9')" id="cuadro9">-</button></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <script>
             let jugadasJugador = [];
             let jugadasMaquina = [];

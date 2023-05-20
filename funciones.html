@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Funciones</title>
+    <script src="funcionesmatematicas.js"></script>
+    <script src="calculadora.js"></script>
+    <script src="funcionesTexto.js"></script>
+    <script src="funcioneshtml.js"></script>
+</head>
+<body>
+    <table border="1" id="gridRoot">
+        <thead>
+            <th colspan="3" id="tdPantalla"></th>
+        </thead>
+        <tbody>
+            <tr>
+                <th onclick="controlarEvento(this)">1</th>
+                <th onclick="controlarEvento(this)">2</th>
+                <th onclick="controlarEvento(this)">3</th>
+                <th onclick="controlarEvento(this)">+</th>
+            </tr>
+            <tr>
+                <th onclick="controlarEvento(this)">4</th>
+                <th onclick="controlarEvento(this)">5</th>
+                <th onclick="controlarEvento(this)">6</th>
+                <th onclick="controlarEvento(this)">-</th>
+            </tr>
+            <tr>
+                <th onclick="controlarEvento(this)">7</th>
+                <th onclick="controlarEvento(this)">8</th>
+                <th onclick="controlarEvento(this)">9</th>
+                <th onclick="controlarEvento(this)">*</th>
+            </tr>
+            <tr>
+                <th colspan="2" onclick="controlarEvento(this)">.</th>
+                <th onclick="controlarEvento(this)">0</th>
+                <th onclick="controlarEvento(this)">/</th>
+            </tr>
+            <tr>
+                <th colspan="4" onclick="controlarEvento(this)">=</th>
+            </tr>
+        </tbody>
+    </table>
+    <h1>Funciones</h1>
+    <button type="button" onclick="mostrarResultado(dividir([10,2]))">Button</button>
+</body>
+</html>
