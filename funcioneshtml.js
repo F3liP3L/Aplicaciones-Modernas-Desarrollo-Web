@@ -19,7 +19,9 @@ function setText(id, text){
     element.innerText = text;
 }
 
-
+function showMessage(message){
+    alert(getTrimValue(message));
+}
 
 
 

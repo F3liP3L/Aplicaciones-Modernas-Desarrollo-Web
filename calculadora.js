@@ -16,5 +16,13 @@ function setNumber(text){
 }
 
 function setDot(){
-    setText(idTdPantalla, getTextById(idTdPantalla) + ".");
+
+    let currentText = getTextById(idTdPantalla);
+    if(contains(currentText, ".")){
+        showMessage("Ya ha colocado un punto.");
+    } else if(isEmptyOrNull(currentText)){
+        setText(idTdPantalla,"0.")
+    } else {
+        setText(idTdPantalla, getTextById(idTdPantalla) + ".");
+    }
 }
