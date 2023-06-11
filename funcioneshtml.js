@@ -24,10 +24,6 @@ function showMessage(message){
 }
 
 
-
-
-
-
 function hacerMagia(a,b){
     let resultado = sumar(a,b);
     mostrarResultado('se hizo magia ' + resultado);

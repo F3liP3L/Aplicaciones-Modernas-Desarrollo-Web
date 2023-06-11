@@ -4,6 +4,8 @@ const regularExpreDot = /^[.]$/;
 
 const regularExpreIsDotInText = /^[^.].[^.]$/;
 
+const ADDITION = "+";
+
 const EMPTY = '';
 
 function matchPattern(rE, value){
@@ -17,12 +19,16 @@ function isDot(value){
     return matchPattern(regularExpreDot, value);
 }
 
+function isAddition(value){
+    return ADDITION === value;
+}
+
 function isDotInText(value){
     return matchPattern(regularExpreIsDotInText, value);
 }
 
 function isEmptyOrNull(value){
-    return getTrimDefaultValue(value, EMPTY) === EMPTY;
+    return getTrimDefaultValue(value, configuraciones.EMPTY) === EMPTY;
 }
 
 function getTrimDefaultValue(value, defaultValue){

@@ -1,0 +1,10 @@
+{
+    "ADDITION": "+",
+    "DIFFERENCE":"-",
+    "DIVISION":"/",
+    "PRODUCT":"*",
+    
+    "EMPTY": ""
+
+
+}
