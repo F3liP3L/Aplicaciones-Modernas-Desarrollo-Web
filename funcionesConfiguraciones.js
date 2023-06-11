@@ -10,8 +10,8 @@ fs.readFile(rutaArchivo, 'utf8', (error, data) => {
   }
 
   // Parsea el contenido JSON a un objeto JavaScript
-  const configuraciones = JSON.parse(data);
+  const config = JSON.parse(data);
 
   // Utiliza las configuraciones como desees
-  console.log(configuraciones);
+  console.log(config);
 });

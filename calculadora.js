@@ -1,4 +1,4 @@
-const idTdPantalla = "tdPantalla";
+const idTdDisplay = "tdPantalla";
 
 function controlarEvento(element){
 
@@ -12,17 +12,17 @@ function controlarEvento(element){
 }
 
 function setNumber(text){
-    setText(idTdPantalla, getTextById(idTdPantalla) + text);
+    setText(idTdDisplay, getTextById(idTdDisplay) + text);
 }
 
 function setDot(){
 
-    let currentText = getTextById(idTdPantalla);
+    let currentText = getTextById(idTdDisplay);
     if(contains(currentText, ".")){
         showMessage("Ya ha colocado un punto.");
     } else if(isEmptyOrNull(currentText)){
-        setText(idTdPantalla,"0.")
+        setText(idTdDisplay,"0.")
     } else {
-        setText(idTdPantalla, getTextById(idTdPantalla) + ".");
+        setText(idTdDisplay, getTextById(idTdDisplay) + ".");
     }
 }

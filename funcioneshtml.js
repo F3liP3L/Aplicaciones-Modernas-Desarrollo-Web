@@ -1,5 +1,5 @@
-function mostrarResultado(resultado){
-    alert(resultado);
+function showResult(result){
+    alert(result);
 }
 
 function getElementById(id){
@@ -21,10 +21,4 @@ function setText(id, text){
 
 function showMessage(message){
     alert(getTrimValue(message));
-}
-
-
-function hacerMagia(a,b){
-    let resultado = sumar(a,b);
-    mostrarResultado('se hizo magia ' + resultado);
 }

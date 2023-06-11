@@ -1,17 +1,17 @@
 let arrayNumbers= []
 
-function sumar(array){
+function addition(array){
     return array.reduce((acumulador, valorActual) => acumulador + valorActual);
 }
 
-function restar(array){
+function subtract(array){
     return array.reduce((acumulador, valorActual) => acumulador - valorActual);
 }
 
-function multiplicar(array){
+function multiply(array){
     return array.reduce((acumulador, valorActual) => acumulador * valorActual);
 }
 
-function dividir(array){
+function division(array){
     return array.reduce((acumulador, valorActual) => acumulador / valorActual);
 }

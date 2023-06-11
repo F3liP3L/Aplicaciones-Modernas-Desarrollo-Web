@@ -4,10 +4,6 @@ const regularExpreDot = /^[.]$/;
 
 const regularExpreIsDotInText = /^[^.].[^.]$/;
 
-const ADDITION = "+";
-
-const EMPTY = '';
-
 function matchPattern(rE, value){
     return rE.test(value);
 }
@@ -20,7 +16,7 @@ function isDot(value){
 }
 
 function isAddition(value){
-    return ADDITION === value;
+    return config.ADDITION === value;
 }
 
 function isDotInText(value){
@@ -28,7 +24,7 @@ function isDotInText(value){
 }
 
 function isEmptyOrNull(value){
-    return getTrimDefaultValue(value, configuraciones.EMPTY) === EMPTY;
+    return getTrimDefaultValue(value, config.EMPTY) === config.EMPTY;
 }
 
 function getTrimDefaultValue(value, defaultValue){
@@ -36,7 +32,7 @@ function getTrimDefaultValue(value, defaultValue){
 }
 
 function getTrimValue(value){
-    return getTrimDefaultValue(value,EMPTY);
+    return getTrimDefaultValue(value,config.EMPTY);
 }
 
 function contains(string, value){
