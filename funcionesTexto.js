@@ -4,9 +4,14 @@ const regularExpreDot = /^[.]$/;
 
 const regularExpreIsDotInText = /^[^.].[^.]$/;
 
+
+const ADDITION = "+";
+const EMPTY = "";
+
 function matchPattern(rE, value){
     return rE.test(value);
 }
+
 function isDigit(value){
     return matchPattern(regularExpreDigit, value);
 }
@@ -24,7 +29,7 @@ function isDotInText(value){
 }
 
 function isEmptyOrNull(value){
-    return getTrimDefaultValue(value, config.EMPTY) === config.EMPTY;
+    return getTrimDefaultValue(value, EMPTY) === EMPTY;
 }
 
 function getTrimDefaultValue(value, defaultValue){
@@ -32,7 +37,7 @@ function getTrimDefaultValue(value, defaultValue){
 }
 
 function getTrimValue(value){
-    return getTrimDefaultValue(value,config.EMPTY);
+    return getTrimDefaultValue(value, EMPTY);
 }
 
 function contains(string, value){

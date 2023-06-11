@@ -13,5 +13,6 @@ fs.readFile(rutaArchivo, 'utf8', (error, data) => {
   const config = JSON.parse(data);
 
   // Utiliza las configuraciones como desees
+  console.log("Aqui entro");
   console.log(config);
 });
