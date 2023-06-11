@@ -5,6 +5,8 @@ const regularExpreDot = /^[.]$/;
 const regularExpreIsDotInText = /^[^.].[^.]$/;
 
 
+const {config} = require("./funcionesConfiguraciones.js");
+
 const ADDITION = "+";
 const EMPTY = "";
 
@@ -43,3 +45,5 @@ function getTrimValue(value){
 function contains(string, value){
     return getTrimValue(string).indexOf(getTrimValue(value)) !== -1;
 }
+
+console.log(config);
