@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const routConfig = "./resources/constantes.json";
+const routConfig = "./resources/constants.json";
 
 
 function readJson(route){

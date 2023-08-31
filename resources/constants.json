@@ -1,7 +1,8 @@
 {
     "ADDITION": "+",
-    "DIFFERENCE":"-",
+    "SUBTRACTION":"-",
     "DIVISION":"/",
     "PRODUCT":"*",
-    "EMPTY": ""
+    "EMPTY": "",
+    "ZERO": 0
 }

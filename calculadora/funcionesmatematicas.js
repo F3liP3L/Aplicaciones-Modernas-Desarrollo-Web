@@ -1,7 +1,11 @@
 let arrayNumbers= []
 
+function additionOnlyTwoNumbers(a, b) {
+    return a + b;
+}
+
 function addition(array){
-    return array.reduce((acumulador, valorActual) => acumulador + valorActual);
+    return array.reduce((accumulator, valorActual) => accumulator + valorActual);
 }
 
 function subtract(array){
