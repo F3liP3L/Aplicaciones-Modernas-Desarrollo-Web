@@ -24,13 +24,44 @@
         #prefijo {
             background-color: blue;
         }
+
+        table {
+            background-color: blueviolet;
+            text-align: center;
+            color: rgb(131, 255, 120);
+            font-size: 20px;
+            border-color: rgb(197, 34, 34);
+        }
+
+        table.claseuno {
+            background-color: rgb(75, 184, 166);
+            text-align: center;
+            color: rgb(131, 255, 120);
+            font-size: 20px;
+            border-color: rgb(197, 34, 34);
+            border-style: dotted;
+            border-width: 5px;
+        }
     </style>
 </head>
     <body>
         <h1> Prueba de Estilos Calidad</h1>
         <h7> No deberia de existir</h7>
         <h7 id="prefijo"> Mi Ejempliviris </h7>
-        <h1 id="prefijo"> Otro Ejempliviris </h1>
+        <h1 class="clase1"> Otro Ejempliviris </h1>
         <button>Button</button>
+        <div>
+            <table class="claseuno">
+                <tr>
+                    <th>Holaaa !!!</th>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Hola Por segunda vez</th>
+                </tr>
+            </table>
+        </div>
     </body>
+
 </html>

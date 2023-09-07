@@ -18,27 +18,27 @@
         </thead>
         <tbody>
             <tr>
-                <th onclick="controlEvent(this)">1</th>
-                <th onclick="controlEvent(this)">2</th>
-                <th onclick="controlEvent(this)">3</th>
-                <th onclick="controlEvent(this)">+</th>
+                <th class="number" onclick="controlEvent(this)">1</th>
+                <th class="number" onclick="controlEvent(this)">2</th>
+                <th class="number" onclick="controlEvent(this)">3</th>
+                <th class="operator" onclick="controlEvent(this)">+</th>
             </tr>
             <tr>
-                <th onclick="controlEvent(this)">4</th>
-                <th onclick="controlEvent(this)">5</th>
-                <th onclick="controlEvent(this)">6</th>
-                <th onclick="controlEvent(this)">-</th>
+                <th class="number" onclick="controlEvent(this)">4</th>
+                <th class="number" onclick="controlEvent(this)">5</th>
+                <th class="number" onclick="controlEvent(this)">6</th>
+                <th class="operator" onclick="controlEvent(this)">-</th>
             </tr>
             <tr>
-                <th onclick="controlEvent(this)">7</th>
-                <th onclick="controlEvent(this)">8</th>
-                <th onclick="controlEvent(this)">9</th>
-                <th onclick="controlEvent(this)">*</th>
+                <th class="number" onclick="controlEvent(this)">7</th>
+                <th class="number" onclick="controlEvent(this)">8</th>
+                <th class="number" onclick="controlEvent(this)">9</th>
+                <th class="operator" onclick="controlEvent(this)">*</th>
             </tr>
             <tr>
                 <th colspan="2" onclick="controlEvent(this)">.</th>
-                <th onclick="controlEvent(this)">0</th>
-                <th onclick="controlEvent(this)">/</th>
+                <th class="number" onclick="controlEvent(this)">0</th>
+                <th class="operator" onclick="controlEvent(this)">/</th>
             </tr>
             <tr>
                 <th colspan="4" onclick="controlEvent(this)">=</th>
@@ -46,6 +46,6 @@
         </tbody>
     </table>
     <h1>Funciones</h1>
-    <button type="button" onclick="showResult(division([10,2]))">Button</button>
+    <button class="operator" type="button" onclick="showResult(division([10,2]))">Button</button>
 </body>
 </html>

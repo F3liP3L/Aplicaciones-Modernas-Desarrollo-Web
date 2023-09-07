@@ -6,3 +6,25 @@ body {
     background-color: rgb(44, 44, 44);
     color: whitesmoke;
 }
+
+.number {
+    background-color: aquamarine;
+}
+
+.operator {
+    background-color: cadetblue;
+}
+
+.number:active {
+    background-color: coral;
+}
+
+.operator:active {
+    background-color: crimson;
+}
+
+.operator:focus {
+    background-color: rgb(138, 103, 170);
+}
+
+
